@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>Registration Page</title>
+</head>
+<body>
+
+<h1 style="color: orange;">Register Yourself</h1>
+	
+<!--	<h2 th:text="${m}"></h2>  -->
+	
+	<form action="RegPage" method="post">
+		<input type="text" name="name" placeholder="Enter your name here" /><br><br>
+		<input type="text" name="email" placeholder="Enter your email id here" /><br><br>
+		<input type="password" name="pass" placeholder="Set your password" /><br><br>
+		<input type="radio" name="gender" />Male<br>
+		<input type="radio" name="gender" />Female
+		<br><br>
+		<select id="city" name="city">
+			<option>Select City</option>
+			<option>Delhi</option>
+			<option>Mumbai</option>
+			<option>Banglore</option>
+			<option>Kolkata</option>
+			<option>Noida</option>
+			<option>Gurugram</option>
+		</select><br><br>
+		<button type="submit">Register</button>
+	</form>
+
+
+</body>
+</html>

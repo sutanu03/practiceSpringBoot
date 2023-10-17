@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Details Page</title>
+</head>
+<body>
+
+<h1>Details : </h1>
+<!-- <h2 th:text="${m}"></h2>   -->
+<h4 th:text=${person.name}></h4>
+<h4 th:text=${person.email}></h4>
+<h4 th:text=${person.pass}></h4>
+<h4 th:text=${person.gender}></h4>
+<h4 th:text=${person.city}></h4>
+<h4 th:text=${person}></h4><br><br>
+<form action="LoginPage" method="post">
+	<button type="submit">Logout</button>
+</form>
+</body>
+</html>
