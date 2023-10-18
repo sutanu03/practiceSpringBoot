@@ -74,6 +74,27 @@ public class MainController {
 		return "ProgrammerInfo.html";
 	}
 	
+	// update programmer details
+	@PostMapping("/updateData")
+	public String updateProgrammer(@ModelAttribute Programmer programmer)
+	{
+		Programmer p = pr.getOne(programmer.getpID());
+		
+		p.setpName(programmer.getpName());
+		p.setpLang(programmer.getpLang());
+		
+		pr.save(programmer);
+		
+		return "ProgrammerInfo.html";
+	}
+	
+	// delete programmer details by ID
+		@GetMapping("/deleteData")
+		public String deleteProgrammerDetails(@RequestParam int pID) {
+			pr.deleteById(pID);
+			return"redirect:/indexPage";
+		}
+	
 //	public ModelAndView allProgrammer(Model m)
 //	{
 //		Model

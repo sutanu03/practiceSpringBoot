@@ -2,7 +2,7 @@
 <html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Enter details</title>
+<title>User CRUD Page</title>
 </head>
 <body>
 	
@@ -14,45 +14,41 @@
 	<form action="addedProgrammer" method="post">
 <!--		<input type="text" name="pID" placeholder="Enter your name here" /><br><br> -->
 		<input type="text" name="pName" placeholder="Enter your name here" /><br><br>
-		<input type="text" name="pLang" placeholder="Enter your language here" /><br><br>
+		<input type="text" name="pLang" placeholder="Enter your language here" />
 		<button type="submit">Register</button>
 	</form>
 	
 	<br>
 	<hr/>
-	<br>
 	
 	
 	<!-- Read data by ID -->
 	<h1 style="color: orange;">Read Your Details</h1>
 	<form action="readData" method="post">
-<!--		<input type="text" name="pID" placeholder="Enter your name here" /><br><br> -->
-		<input type="text" name="pID" placeholder="Enter your ID here" /><br><br>
+		<input type="text" name="pID" placeholder="Enter ID to see details" />
 		<button type="submit">Find By ID</button>
 	</form>
 	
 	<br>
 	<hr/>
-	<br>
 	
 	<!-- Update/Edit data by ID -->
 	<h1 style="color: orange;">Update Your Details</h1>
-	<form action="" method="post">
-<!--		<input type="text" name="pID" placeholder="Enter your name here" /><br><br> -->
+	<form action="updateData" method="post">
 		<input type="text" name="pID" placeholder="Enter your ID here" /><br><br>
-		<button type="submit">Find By ID</button>
+		<input type="text" name="pName" placeholder="Enter new name" /><br><br>
+		<input type="text" name="pLang" placeholder="Enter new language" />
+		<button type="submit">Update Details</button>
 	</form>
 	
 	<br>
 	<hr/>
-	<br>
 	
 	<!-- Delete data by ID -->
 	<h1 style="color: orange;">Delete Your Details</h1>
-	<form action="" method="post">
-<!--		<input type="text" name="pID" placeholder="Enter your name here" /><br><br> -->
-		<input type="text" name="pID" placeholder="Enter your ID here" /><br><br>
-		<button type="submit">Find By ID</button>
+	<form action="deleteData" method="get">
+		<input type="text" name="pID" placeholder="Enter ID to delete details" />
+		<button type="submit">Delete</button>
 	</form>
 	
 </body>
