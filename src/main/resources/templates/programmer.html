@@ -5,17 +5,55 @@
 <title>Enter details</title>
 </head>
 <body>
-<h1 style="color: orange;">Register Yourself as a Programmer</h1>
 	
 <!--	<h2 th:text="${m}"></h2>  -->
-	
+
+
+	<!-- Create data -->
+	<h1 style="color: orange;">Register Yourself as a Programmer</h1>
 	<form action="addedProgrammer" method="post">
 <!--		<input type="text" name="pID" placeholder="Enter your name here" /><br><br> -->
 		<input type="text" name="pName" placeholder="Enter your name here" /><br><br>
 		<input type="text" name="pLang" placeholder="Enter your language here" /><br><br>
-		
-		<br><br>
 		<button type="submit">Register</button>
 	</form>
+	
+	<br>
+	<hr/>
+	<br>
+	
+	
+	<!-- Read data by ID -->
+	<h1 style="color: orange;">Read Your Details</h1>
+	<form action="readData" method="post">
+<!--		<input type="text" name="pID" placeholder="Enter your name here" /><br><br> -->
+		<input type="text" name="pID" placeholder="Enter your ID here" /><br><br>
+		<button type="submit">Find By ID</button>
+	</form>
+	
+	<br>
+	<hr/>
+	<br>
+	
+	<!-- Update/Edit data by ID -->
+	<h1 style="color: orange;">Update Your Details</h1>
+	<form action="" method="post">
+<!--		<input type="text" name="pID" placeholder="Enter your name here" /><br><br> -->
+		<input type="text" name="pID" placeholder="Enter your ID here" /><br><br>
+		<button type="submit">Find By ID</button>
+	</form>
+	
+	<br>
+	<hr/>
+	<br>
+	
+	<!-- Delete data by ID -->
+	<h1 style="color: orange;">Delete Your Details</h1>
+	<form action="" method="post">
+<!--		<input type="text" name="pID" placeholder="Enter your name here" /><br><br> -->
+		<input type="text" name="pID" placeholder="Enter your ID here" /><br><br>
+		<button type="submit">Find By ID</button>
+	</form>
+	
 </body>
 </html>
