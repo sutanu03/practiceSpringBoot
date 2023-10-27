@@ -1,5 +1,7 @@
 package com.sutanu.main.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,12 +9,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-//import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
-import com.sutanu.main.model.Person;
 import com.sutanu.main.model.Programmer;
 import com.sutanu.main.repository.ProgrammerRepo;
 
@@ -73,6 +71,18 @@ public class MainController {
 		m.addAttribute("programmer", p);
 		return "ProgrammerInfo.html";
 	}
+	
+	// read programmer details by Language
+		@PostMapping("/readDataByLang")
+		public String readProgrammerDetailsByLang(@RequestParam String pLang, Model m) {
+			//for auto query dsl
+			//List<Programmer> p = pr.findBypLang(pLang);
+			
+			//for query annotation and custom query way
+			List<Programmer> p = pr.findName(pLang);
+			m.addAttribute("programmers", p);
+			return "allProgrammers.html";
+		}
 	
 	// update programmer details
 	@PostMapping("/updateData")
